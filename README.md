@@ -2,12 +2,17 @@
 
 This is the official Homebrew tap for [ZTop](https://github.com/renato-umeton/ztop) - an all-in-one terminal system monitor for macOS.
 
-## Installation
+## Installation (Fully Automatic!)
 
 ```bash
 brew tap renato-umeton/ztop
 brew install ztop
 ```
+
+**That's it!** Installation automatically:
+- Configures passwordless sudo (no prompts!)
+- Sets up `ztop` and `zz` commands
+- Installs all dependencies (tmux, htop, mactop, ctop, nethogs)
 
 ## What is ZTop?
 
@@ -34,13 +39,7 @@ ztop  # or
 zz    # shorter version
 ```
 
-### Configure Passwordless Sudo (Required)
-
-```bash
-sudo visudo
-# Add this line:
-%admin ALL=(ALL) NOPASSWD: /opt/homebrew/bin/htop, /opt/homebrew/bin/mactop, /opt/homebrew/bin/nethogs
-```
+Passwordless sudo is automatically configured during installation!
 
 ## Oh My Zsh Plugin
 
